@@ -1,0 +1,121 @@
+<!-- 
+    '!'+tab is the emet for the start of of an HTML file. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+    - DOCTYPE: declares exactly what it is, an HTML document.
+    - lang: notes what the language of the document. Helps assist search engines & browsers.
+    - The head tag holds all of our meta data for the document. 
+    - This holds various information such as the title of the document, viewport settings, and links to other files, such as CSS.
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to HTML</title>
+    <!-- 
+        - charset: defines which characters are available, such as 0-9, A-Z, and symbols.
+            - UTF-8 covers almost all of the characters
+        - http-equiv: Allows us to render older browser versions if necessary. In this case, we are targeting Edge; however this isn't as necessary. 
+        - name & content: Details on the users viewport, or screen, and auto scales as necessary.
+        - title: details the title of our document. This is displayed in the tab of the browser page.
+    -->
+
+</head>
+<!-- The Body Tag ---
+    -What the client will display when rendering.
+    -What you see on the page in the browser.
+-->
+<body>
+  <h1>Examples of Structural Elements</h1> 
+  <div>
+    <div>h1: heading. These range from h1 - h6, getting smaller as the number increases.
+        div: a division
+        p : paragraph element
+        img: provides us an element to present an image.
+        span: We can write a block of text without line breaks.
+    </div>
+    <h2>Sample H2</h2>
+    <h3>Sample H3</h3>
+    <h4>Sample H6</h4>
+    <p>Check out my fancy new paragraph element!</p>
+
+
+    <!-- Through Emet, we can add blocks of text via Lorem. This is a great way to create filler content for mockups. -->
+    
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laboriosam earum quaerat fugit eaque tenetur vel ratione natus eum, quis voluptatum, officia minima sint aliquam, veritatis obcaecati quia laborum debitis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia libero architecto natus adipisci laboriosam. Repellat voluptatem at laborum repellendus exercitationem consequuntur enim sunt culpa! Fugit laborum provident dolorum quos nesciunt!
+        Ratione natus praesentium ea nemo voluptate ad consequuntur iusto nihil dolorum beatae inventore voluptatem accusamus labore tenetur, at et alias expedita doloribus velit commodi repudiandae non deserunt ipsum? Impedit, laboriosam.
+    </span>
+    <br>
+    <img src="https://assets.website-files.com/5f4577933a0688792f77983b/5ffcaf5bf69d7dbee581b8e3_01_11-21_UPRIGHT_LOGO_800.png" alt="Upright Logo">
+        <!-- 
+            img tag has two default attributes
+                - src
+                    - required
+                    - source of the image. This could be in an assets folder or another location on the web.
+                - alt
+                    - optional ~ but highly recommended
+                    - text that is used in case image doesn't load.
+                    - text that is read by screen readers for the visually impaired.
+                    - can be a source for SEO (Search Engine Optimization)  
+                - title
+                    - can help with tool-tips.
+        -->
+        <!-- ^All of the above are design elements -->
+
+</div> 
+<!-- Style/Styled Elements -->
+<!-- 
+        emmet example: div>ul>li*6 
+
+        ul: Unordered List w/ bullet points
+        ol: Ordered List w/ numbers
+        li: List Item
+    -->
+<div>
+    <ul>
+        <li><strong>Bolds our text</strong>, but so does <b>this</b>.</li>
+        <li><em>Provides emphasis</em> or <i>italics</i></li>
+            <li><br>Will do a line break for us. <i>Notice the no closing tags?</i></li>
+            <li><hr>Gives us a horizontal rule or <b>dividing line</b></li>
+            <li><blockquote>"quote"</blockquote></li>
+            <li><pre>A way to showcase code</pre></li>
+    </ul>
+</div> 
+<!-- ! More Self Closing Tags: -->
+<div><!-- 
+    input: typically used in forms but not limited. 
+        - Many different types such as numbers, radial, email, password, etc.
+    link: won't show up in the browser, but is a way for us to connect files such as CSS.
+-->
+<input type="text">
+<input type="password">
+<link rel="stylesheet" href="">
+
+</div>
+<!-- Semantic Elements: element names that clearly describe what they are to both the dev and browser. -->
+
+<img src="https://images-ext-1.discordapp.net/external/imBUTaP65ikn9yLun3-TGQfeyBd0N4UQEE5wgBGBpqI/https/i.pinimg.com/originals/46/e2/1c/46e21c46e7001fca6554cd45562268fa.jpg?width=725&height=500" alt="Semantic Tag Layout">
+
+<hr>
+
+<!-- 
+        Sample HTML layout of Page Structure Example
+        - wrapped in a div simply to separate it out.
+    -->
+
+    <div>
+        <header></header>
+        <aside></aside>
+        <section>
+            <article></article>
+            <article></article>
+        </section>
+        <footer></footer>
+    </div>
+    
+</body>
+
+</html>
