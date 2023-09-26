@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="flex-sample">
+        <h1>Flex Practice</h1>
+        <div id="flex-container">
+            <div class="card">
+               <h3>Accomplish</h3>
+            <p><b>Horizontal</b> or <b>vertical </b>arrangement of elements.</p>
+            <p>Space distribution of elements.</p>
+            <!--click on a tag to see it's relative opening or closing tag-->
+           </div>
+           <div class="card">
+            <h3>Quick Notes</h3>
+            <p>Flex on a given container is one-dimensional, meaning it is either going to 
+                affect a row or a column, but not both at the same time</p>
+                <p>Useful for layouts of images galleries, navbars, etc.</p>
+                <p>Places elements that affect direct children, but not further children.</p>
+        </div>  
+        <div class="card">
+          <h3>Flex Container</h3>
+            <p>Applying the display of a Flex property to something, typically a "div" property. 
+                Our element with the display Flex style. This style applies to the container AND it's children.</p>
+        </div>
+
+        <div class="card">
+            <h3>Justify Content</h3>
+            <p>Positions content along the axis of our flex container.</p>
+            <ol>
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>center</li>
+                <li>space-between</li>
+                <li>space-around</li>
+                <li>space-evenly</li>
+            </ol>
+        </div>
+        
+        <div class="card">
+            <h3>Align Items</h3>
+            <p>Similar to justify, <b>but</b> works along the cross access (perpendicular to the Flex direction).</p>
+            <ol>
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>center</li>
+                <li>stretch</li>
+                <li>baseline</li>
+            </ol>
+        </div>
+        
+        <!--if you write a tag and hit enter it will give you both parts. also with div, if you follow it with '.card'
+        it will autofill with <div class="card"></div>-->>
+    </div>
+</body>
+</html>

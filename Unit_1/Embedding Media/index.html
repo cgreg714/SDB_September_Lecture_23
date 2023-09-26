@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding Media</title>
+</head>
+<style>
+    /*This will target the CSS commands at the <body> portion of the HTML*/
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgrey;
+    }
+</style>
+<body>
+    <!--
+        Purpose:
+            -Videos can be a useful tool to provide information.
+            -Images can make your site more enjoyable.
+            -Maps can help potential customers find your physical location.
+            -Provide more information and engagement.
+        Types:
+            - Media
+            - other HTML
+            - ads
+            - maps, graphs, etc.
+    -->
+
+    <!--! Images -->
+    <!-- Media can be either:
+        - stored in an 'assets' directory OR
+        - Linked to externally via address 
+        - images format should be taken into consideration
+    -->
+    <img src="https://wikizilla.org/w/images/3/30/Godzilla_Minus_One_version.png" 
+    alt="Gojira" style="height: 150px width: 100px">
+    <br>
+
+    <!--
+            Common Files:
+                -jpg/jpeg
+                    -no transparency allowed
+                    -raster (pixel) based
+                -png
+                    -raster based
+                    -supports transparency
+                -svg
+                    -scalable vector graphic
+                    -vector based
+                    -scales indefinitely
+    -->
+
+    <!--! iFrame -->
+    <iframe 
+        src="https://www.docdroid.net/e4H92U6/godzilla-pdf"
+        title="HTML Cheat Sheet"
+        frameborder="0"
+        height="500"
+        width="800"
+>
+    </iframe>
+    <!--
+        -can take longer to load
+        -used to embed other documents (ie. HTML docs)
+        -utilize attributes to detail elements
+        -common to use for videos for dedicated hosts ( ie. Youtube, Vimeo) 
+    -->
+    <br>
+    <!--! Video -->
+    <video width="400" height="200" controls>
+        <!-- include the 'controls' attribute to get onsreen control -->
+            <source src="#file.mp4" type="video/mp4">
+            <source src="#file.ogg" type="video/ogg">
+            <source src="#file.mov" type="video/mov">
+            <p>Unsupported File Type</p>
+            
+</video>    
+    <!--
+        -option for locally stored videos
+        -control
+            -provide a "play", "pause", "volume" option
+        -source
+            -provides possible file formats
+            -runs from top to bottom
+        -different file types can be referenced in the assets folder to increase compatibility across multiple browsers
+    -->
+    <br>
+    <!--! Audio -->
+    <audio autoplay="false" muted="true" controls>
+        <source src="#audio.mp3" type="audio/mp3">
+        <source src="#audio.ogg" type="audio/ogg">
+        <p>Unsupported File Type</p>
+    </audio>
+    <!-- 
+        -very similar to including video
+        -autoplay
+            -starts when page loads
+            -accepts a boolean 'true/false' value to do this or not
+        -muted
+            -accepts a boolean 'true/false' value to do this or not
+        -loop
+            -repeats the audio after it is loaded
+        -->
+    <br>
+    <!--! Maps -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662975.6539616548!2d138.4503954936496!3d35.504294940427926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sus!4v1695652686488!5m2!1sen!2sus" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    <!--
+        -Google maps provides the HTML code for you. Select 'share', then 'embed a map', 
+        then copy and paste iframe code into your page. tailor width/height to your liking.
+    -->
+</body>
+</html>
