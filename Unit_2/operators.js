@@ -47,7 +47,7 @@ console.log(3 == 3); // true
 console.log("3" != 3); // false
 console.log("3" != 4); // true
 
-// Not Equal To, !== (checking both datatype AND values)
+// Strict Not Equal To, !== (checking both datatype AND values)
 
 console.log(3 !== 3); // false because 3 and 3 are equal
 console.log("3" !== 4); // true, because they are different datatypes
@@ -72,11 +72,18 @@ console.log( 18 <= 3 );// false
 console.log( 7 <= 7 );//true
 console.log(4 <= 7);// false
 
-// And, &&
-2 && 3;
+// And, && (evaluates from left to right, returns the first falsy value or the last value if none were found.)
+console.log(2 && 3); // 3
 
-// And/Or, || (check if this number is equal to this amount or that amount.)
-2 || 3;
+// And/Or, || (check if this number is equal to this amount or that amount. Returns the first truthy value)
+console.log(2 || 3);
+console.log(0 || 0 || 2|| 4);// 2
+
+// Not, ! (converts the operand to a boolean [true/false] value and returns the inverse value.)
+console.log( !true ); // false
+console.log( !0 ); // true
+
+
 
 /* 
     Logical Operators
