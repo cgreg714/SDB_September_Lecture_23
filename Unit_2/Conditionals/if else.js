@@ -100,7 +100,7 @@ if (rain !=true) {
 // let grade = 92; // 'This grade is passing. Great Job!
 // let grade = 70; // 'Not quite passing. Reach out to your instructor.'
 // let grade = 50; // 'Your parents are wasting their money.'
-
+let grade= 70
 if (grade >= 75) {
     console.log('This grade is passing. Great Job!')
 } else if (grade >= 69) {
