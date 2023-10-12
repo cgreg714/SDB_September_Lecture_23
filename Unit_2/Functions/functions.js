@@ -105,3 +105,19 @@ let arrList = function arrList() {
         }
     }
     callDogs();
+
+    let num1
+    let num2
+    let newNum
+
+    function addTwoNumbers(one, two) {
+        let sum = one + two;
+        console.log(sum);
+    }
+
+    num1= 1;
+    num2 = 2;
+    newNum= 5;
+
+    addTwoNumbers(num1, num2);
+    addTwoNumbers(num1, newNum);
