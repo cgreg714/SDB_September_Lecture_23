@@ -94,9 +94,9 @@ console.log(newName);
  
 
 function tipCalc(subTotal) {
-    let tip = subTotal * .2;
-    let total = subTotal +  tip;
-    return total.toFixed(2);
+    let tip = subTotal * .2;  //does the math for a 20% tip
+    let total = subTotal +  tip;  // adds the subtotal to the newly discovered tip
+    return total.toFixed(2);  //returns the total to 2 decimal places
     
 }
 let total = tipCalc(19.72)
