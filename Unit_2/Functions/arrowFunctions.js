@@ -91,7 +91,8 @@ console.log(newName);
     Print that variable (console log)
 */
 
- 
+let bill = 100;
+
 
 function tipCalc(subTotal) {
     let tip = subTotal * .2;  //does the math for a 20% tip
@@ -99,5 +100,8 @@ function tipCalc(subTotal) {
     return total.toFixed(2);  //returns the total to 2 decimal places
     
 }
-let total = tipCalc(19.72)
+// let total = tipCalc(19.72)
+let total = tipCalc(bill);
 console.log(total);
+
+// tipCalc(100);
