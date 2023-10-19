@@ -123,6 +123,10 @@ character = 'Splinter';
 tmnt.find((c,i) => console.log('Index:', c == character, "index: ", i ))
 
 //! .map()
+/* 
+    - similar to a .forEach(), but creates a new array with the results of calling a provided function on every element in the calling array
+    - takes a callback function (cb)
+*/
 
 let numArray = [];
 let fizzBuzzArray = [];
@@ -135,7 +139,7 @@ numArray.map(x => {
 
 console.log(fizzBuzzArray); // displays all numbers between 0 and 101 that are divisible by 15
 
-/*
+/* CHALLENGE
  - First check if you are working with an array
     - Using a method, flip the values within the array 
     (what was in index 4 is now in 0, 3 to 1, etc.)
