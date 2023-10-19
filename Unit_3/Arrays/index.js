@@ -70,7 +70,7 @@ food.shift();
 console.log('SHIFT:', food);
 // removed  'pecan pie'
 
-//! .unshift() - adds an arguemnt or argumentss to the beginning of the array
+//! .unshift() - adds an argument or arguments to the beginning of the array
 food.unshift('Hamburger', 'Salad');
 console.log('UNSHIFT:', food);
 // added 'Hamburger' and  'Salad' to the start of the array
