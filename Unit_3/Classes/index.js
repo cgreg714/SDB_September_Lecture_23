@@ -135,3 +135,7 @@ let itemToSell = Expense.addUpchargeForProfit(1)
 itemToSell.addTax(0.07);
 console.log(itemToSell);
 
+let anotherItem = Expense.addUpchargeForProfit(5);
+anotherItem.addTax(0.06);
+console.log(anotherItem);
+

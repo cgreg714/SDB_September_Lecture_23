@@ -45,7 +45,7 @@ const presidents = [
     { first: 'Donald', last: 'Trump', year: 1946, passed: undefined },
     { first: 'Joseph', last: 'Biden', year: 1942, passed: undefined },
   ];
-
+/*
 const count = Object.keys(presidents).length;
 
 console.log('The total number of presidents in US history is ' + count);
@@ -56,35 +56,17 @@ console.log('The following presidents are still alive:', alive)
 
 const dead = presidents.filter(presidents => presidents.passed <= 2019);
 console.log('The following presidents are dead as a doornail', dead)
-*/
+
 //! Everything above is good to go.
+*/
+presidents.forEach(president => {
 
-presidents.forEach(deathAge)
+ if (president.passed != undefined) {
 
-function deathAge (item, index, arr) 
-{presidents.passed - presidents.year};
+  console.log(`${president.first} ${president.last} was ${president.passed - president.year} years old when they died.`)
 
-console.log(deathAge)
-
-
-
-
-
-//use const of 'dead'
-//subtract value year from value passed
-//console log first, last, new value from previous arrow function
-
-
-// array methods?
-
-
-
-
-
-
-
-
-
+ }
+})
 
 
 
@@ -93,9 +75,7 @@ console.log(deathAge)
 
 
   /* 
-    -How may presidents have we had? -DONE
-    -Create a list of all presidents that are alive -DONE
-    - Dead presidents -DONE
+   
     - Using a forEach loop through the presidents and have it console.log()
     first name, last name, 'Was xx years old when they died
     -We only want the dead presidents to be displayed.

@@ -12,17 +12,22 @@ Part 1
     - Print (console log) the complete object created.
 */
 
-class vehicle {
-    constructor (make, model, no_wheels, color) {
-        this.make = make
-        this.model = model
-        this.no_wheels = no_wheels
-        this.color = color
-    }
-
+class Vehicle {
+   constructor (make, model, no_wheels, color) {
+        this.make = make;
+        this.model = model;
+        this.no_wheels = no_wheels;
+        this.color = color;
 }
-let newCar = new vehicle ('Ford', 'Fiesta','', 'Red')
+    engineOn() {
+        console.log(`The ${this.color} ${this.make} ${this.model} turns on its engine.`)
+    }
+    engineOff() {
+        console.log(`The ${this.color} ${this.make} ${this.model} turns off its engine.`)
+    }
+}    
 
-console.log(vehicle)
-console.log(`The ${vehicle.color} ${vehicle.make} ${vehicle.model} turns on its engine. `)
-console.log(`The ${vehicle.color} ${vehicle.make} ${vehicle.model} turns off its engine. `)
+let newCar = new Vehicle ('Ford', 'Fiesta','4', 'Red')
+newCar.engineOn();
+newCar.engineOff();
+console.log(newCar);
