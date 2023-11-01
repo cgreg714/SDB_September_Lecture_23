@@ -53,21 +53,51 @@ const salesTax = [
     {state: 'Wyoming', tax: .04},
 ];
 
-class store_MA = {
-    constructor (title, location, sales_tax, inventory, balance, expense, profit, tax_paid) {
-        this.title = Ehamp413;
-        this.location = Easthampton_MA;
-        this.sales_tax = 
+class Store {
+    constructor (name, city, state, stateTax, inventory, balance, expense, profit, tax_paid) {
+        this.name = name
+        this.city = city
+        this.state = state
+        this.sales_tax = stateTax
         this.inventory = []
-        this.balance = 
-        this.expense = 200;
-        this.profit = 
-        this.tax_paid = 
+        this.balance = 200
+        this.expense = 0
+        this.profit = 0
+        this.tax_paid = 0
     }
-    static addUpchargeForProfit(wholesale) {
-        let upcharge = wholesale + (wholesale * .25);
-        return new Expense(wholesale, upcharge);
+// static factory method will go in store class
+
+    addItem(stock){
+        this.inventory.push(stock);
     }
+
+    sellItems(item, qty) {
+        item.quantity -= qty;
+        this.profit += Number((item.salePrice * qty).toFixed(2));
+    }
+}
+
+class Item {
+    constructor (productCode, desc, type, wholesale, qty, sale) {
+
+        this.productCode = productCode
+        this.description = desc
+        this.type = type
+        this.wholesale = wholesale
+        this.quantity = qty
+        this.salePrice = sale
+    }
+}
+
+    
+/* 
+  IGNORE  BELOW
+*/
+
+static addUpchargeForProfit(wholesale) {
+    let price = wholesale + (wholesale * .30).toFixed(2);
+    return new Expense(wholesale, price);
+}
 
     constructor(w,s) {
         this.purchased_price = w;
@@ -77,9 +107,9 @@ class store_MA = {
 
     addTax(x) {
         let percentage = x;
-        let saleCost = this.sell_at;
+        let priceAtCost = this.sell_at;
 
-        this.sales_tax = (saleCost + (saleCost * percentage)).toFixed(2);
+        this.sales_tax = (pricaAtCost + (priceAtCost * percentage)).toFixed(2);
 
 
 
