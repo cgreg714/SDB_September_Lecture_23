@@ -50,7 +50,8 @@ const salesTax = [
     {state: 'West Virginia', tax: .06},
     {state: 'Wisconsin', tax: .05},
     {state: 'Wyoming', tax: .04},
-];
+]; //salesTax is an object
+
 //! Classes
 class Store {
     constructor (name, city, state, salesTax, inventory, balance, expense, profit, tax_paid) {
@@ -65,15 +66,21 @@ class Store {
         this.tax_paid = 0
     }
     static createNewStore(name, city, state, inventory, balance, expense, profit, tax_paid) { //create a gap for information by removing salesTax from the parameters
-        let stateTax = salesTax.find(({salesTax}) => salesTax === this.state) //method to locate the state appropriate sales tax
-        return new Store (name, city, state, stateTax, inventory, balance, expense, profit, tax_paid) // returns a new store WITH the sales tax info, then fires that information back to line 55
+        let stateTax = salesTax.find(({state}) => state === state) //method to locate the state appropriate sales tax
+        return new Store (name, city, state, stateTax.tax, inventory, balance, expense, profit, tax_paid) // returns a new store WITH the sales tax info, then fires that information back to line 55
     }
     addToInventory(itemToAdd){
         this.inventory.push(itemToAdd)
     } 
 
     sellItem(itemToRemove){
-        this.inventory.splice(itemToRemove)
+        this.inventory.pop(itemToRemove)//this does nothing at present
+    }
+    
+    addTax(x) {
+        let percentage = salesTax;
+        let purchasePrice = this.purchasePrice.toFixed(2);
+        this.salesTax = (purchasePrice + (purchasePrice * percentage)).toFixed(2);
     }
 }
  
