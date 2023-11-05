@@ -66,7 +66,7 @@ class Store {
         this.tax_paid = 0
     }
     static createNewStore(name, city, state, inventory, balance, expense, profit, tax_paid) { //create a gap for information by removing salesTax from the parameters
-        let stateTax = salesTax.find(({state}) => state === state) //method to locate the state appropriate sales tax
+        let stateTax = salesTax.filter((salesTax) => salesTax.state === this.state)   //method to locate the state appropriate sales tax
         return new Store (name, city, state, stateTax.tax, inventory, balance, expense, profit, tax_paid) // returns a new store WITH the sales tax info, then fires that information back to line 55
     }
     addToInventory(itemToAdd){

@@ -74,7 +74,7 @@ function processItem(i,d,c) {
 };
 
 let useFunction = processItem(iType,iDesc,iCost);
-// console.log(useFunction);
+ console.log(useFunction);
 
 //! M-e-t-h-o-d-s Man - Methods
 

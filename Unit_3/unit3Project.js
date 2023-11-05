@@ -77,10 +77,12 @@ addTax(x) { //how the f do i call upon the state tax percentage in the salesTax 
     let percentage = .625;
     let priceAtCost = this.purchasePrice;
     this.sales_tax = (purchasePrice + (purchasePrice * percentage)).toFixed(2);
-}
+} // this doesn't do a f-ing thing
+
+
     addItem(stock){ //will this even do anything?
         this.inventory.push(stock);
-    }
+    } //answer: no
 
     sellItems(item, qty) { //will THIS even do anything? wtf...
         item.quantity -= qty;
@@ -98,7 +100,6 @@ class Item {
         this.quantity = qty
         this.marketPrice = marketPrice.toFixed(2)
     }
-    
 }
 
 let item1 = new Item (593457600384,'Stuffed Alligator','Toy',8.00, 7, 10.40)
@@ -108,7 +109,8 @@ let item4 = new Item (293224171253, 'Cursed Toaster Oven', 'Appliance', 2.00, 1,
 let item5 = new Item (293224171253, 'Brass Cylinder of Sinister Black Goo', 'Home Decor', 5.12, 1, 6.66)
 let item6 = new Item (503979025428, 'Broken Laptop', 'Electronics', 24.00, 1, 31.20)
 let item7 = new Item (503979025428, 'Bread Machine', 'Appliance', 12.00, 2, 15.60)
-let item8 = new Item (815192370160, 'Allegedly Haunted Doll', 'Toy', 100.00, 1, 130.00)
+let item8 = new Item (815192370160, 'Potentially Haunted Doll', 'Toy', 100.00, 1, 130.00)
+let item9 = new Item (744882423781, 'Pocket Calculator', 'Electronics', .75, 1, .98)
 console.log(item1);
 console.log(item2);
 console.log(item3);
@@ -117,6 +119,8 @@ console.log(item5);
 console.log(item6);
 console.log(item7);
 console.log(item8);
+console.log(item9);
+//at least this mess displays the f-ing items
 
 //
 let store_MA = new Store ('Springfield413', 'Springfield', 'MA', .625, [], 0, 0, 0, 0)
@@ -126,7 +130,7 @@ const store_MA_inv = [
  const store_MA_bank = [
     {balance: 200, expense: 0, profit: 0, taxPaid: 0 }
  ]
-console.log();
+console.log(store_MA_bank);
 
 //
 const store_CT = [
@@ -165,9 +169,7 @@ const store_VT_inv = [
   IGNORE  BELOW
 */
 
-static addUpchargeForProfit(wholesale) {
-    let price = wholesale + (wholesale * .30).toFixed(2);
-    return new Expense(wholesale, price);
+
 }
 
     constructor(w,s) {
