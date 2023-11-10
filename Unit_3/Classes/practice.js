@@ -76,3 +76,28 @@ function filterItems(arr, query) {
 
 console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
 console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
+
+saleProfit(margin){
+    let purchasePrice = item.purchasePrice;
+    let marketPrice = item.marketPrice;
+    let margin = (purchasePrice - marketPrice)
+    margin.push(Store.profit)
+}
+
+salePrice(x) {
+    let sellPrice = markUp + tax
+
+    let markUp = (purchasePrice * .30).toFixed(2);
+    let tax = (markUp * this.salesTax).toFixed(2);
+    return sellPrice.toFixed(2)
+} 
+
+/* 
+   salePrice(x) {
+            let y = markUp + tax
+        
+            let markUp = (purchasePrice * .30).toFixed(2);
+            let tax = (markUp * this.salesTax).toFixed(2);
+            return this.marketPrice
+        } 
+*/
