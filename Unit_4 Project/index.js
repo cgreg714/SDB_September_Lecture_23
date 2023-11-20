@@ -1,15 +1,13 @@
 
 
 //! Global Variables
-const baseURL = "https://fakestoreapi.com/products/category/jewelery";
+const baseURL = "https://fakestoreapi.com/products/category/";
 
 //const storedItems = []; //empty array for stored items to be held inside  <-- possibly unneeded
-const electronics = document.querySelector('.nav-link');
-/*
-const jewelry = document.querySelector();
-const womensClothing = document.querySelector();
-const mensClothing = document.querySelector();
-*/
+const electronics = document.querySelector('#electronics');
+const jewelry = document.querySelector('#jewelry');
+const womensClothing = document.querySelector('#women');
+const mensClothing = document.querySelector('#men');
 
 
 //! Event Listeners
@@ -47,5 +45,5 @@ electronics.addEventListener("click", e => {
       .catch(error => console.log(error));
   }
 
-  //console.log(fakeStore);*/
+  console.log(fakeStore);
 
